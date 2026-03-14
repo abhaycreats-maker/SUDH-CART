@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QuickCart - Blinkit Clone</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<div class="logo">QuickCart</div>
+
+<input type="text" id="search" placeholder="Search groceries...">
+
+<div class="cart-icon" onclick="toggleCart()">
+🛒 Cart (<span id="cart-count">0</span>)
+</div>
+</header>
+
+<section class="banner">
+<h1>Groceries delivered in 10 minutes</h1>
+<p>Fresh products at your doorstep</p>
+</section>
+
+<section class="categories">
+<button onclick="filterCategory('all')">All</button>
+<button onclick="filterCategory('fruits')">Fruits</button>
+<button onclick="filterCategory('dairy')">Dairy</button>
+<button onclick="filterCategory('snacks')">Snacks</button>
+</section>
+
+<section id="products" class="products"></section>
+
+<div class="cart" id="cart">
+<h2>Your Cart</h2>
+<div id="cart-items"></div>
+<h3>Total: ₹<span id="total">0</span></h3>
+<button onclick="checkout()">Checkout</button>
+</div>
+
+<div class="checkout-modal" id="checkout-modal">
+<div class="modal-content">
+<h2>Order Confirmed 🎉</h2>
+<p>Your groceries will arrive in 10 minutes.</p>
+<button onclick="closeModal()">Close</button>
+</div>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+  </html>
